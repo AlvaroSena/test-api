@@ -7,10 +7,9 @@ require('dotenv').config()
 
 const app = express()
 app.use(express.json())
-app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  return res.sendFile(path.join(__dirname, '/public/index.html'))
+  return res.json({ message: 'hello, world' })
 })
 
 app.post('/api/v1/products', async (req, res) => {
