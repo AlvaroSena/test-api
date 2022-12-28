@@ -1,5 +1,5 @@
 const express = require('express')
-const fauna = require('./database')
+const fauna = require('./databse')
 const q = require('faunadb')
 const { v4: uuidv4 } = require('uuid')
 require('dotenv').config()
@@ -50,7 +50,7 @@ app.delete('/api/v1/products/:id/delete', async (req, res) => {
   return res.status(204).send()
 })
 
-const port = 8080 || process.env.PORT
+const port = 3000 || process.env.PORT
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`)
 })
