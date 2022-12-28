@@ -1,7 +1,6 @@
 const express = require('express')
 const fauna = require('./database')
 const q = require('faunadb')
-const path = require('path')
 const { v4: uuidv4 } = require('uuid')
 require('dotenv').config()
 
